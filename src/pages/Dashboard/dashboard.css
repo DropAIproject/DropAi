@@ -1,0 +1,7 @@
+.dashboard-container{
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
