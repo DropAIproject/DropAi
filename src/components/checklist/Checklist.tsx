@@ -5,7 +5,7 @@ export function Checklist() {
   const { projects } = useProjects();
 
   return (
-    <div className="mt-6 space-y-4">
+    <div className="airdrops">
       {projects.map((project) => (
         <ChecklistItem key={project.id} project={project} />
       ))}
