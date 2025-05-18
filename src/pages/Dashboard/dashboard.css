@@ -1,7 +1,50 @@
-.dashboard-container{
-    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
-    color: #ffffff;
-    min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+.dashboard {
+  background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.feature-card {
+  margin-bottom: 30px;
+}
+
+.airdrops {
+  margin-top: 50px;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.wallet-button {
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wallet-button:hover {
+  background-color: #9333ea;
+}
+
+.wallet-button:active {
+  background-color: #7e22ce;
+}
+
+/* When wallet is connected, style can be slightly different */
+.wallet-button.connected {
+  background-color: #27272a;
+  border: 1px solid #a855f7;
+}
+
+.wallet-button.connected:hover {
+  background-color: #3f3f46;
 }
