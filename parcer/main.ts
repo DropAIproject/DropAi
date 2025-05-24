@@ -2,6 +2,7 @@ import express from "express";
 import userRoutes from "./routes/user.routes";
 import { connectDB } from "./config/database";
 import { parse } from "./cron/parser";
+import { processAirdrops } from "./controllers/airdrop.controller";
 
 const app = express();
 const PORT = 3000;
@@ -12,7 +13,7 @@ app.use(express.json());
 // Routes
 app.use("/api/users", userRoutes);
 
-parse();
+processAirdrops();
 
 // Start server
 connectDB().then(() => {
