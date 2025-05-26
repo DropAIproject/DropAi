@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# DropAi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered tool for airdrop hunters. It scans and analyzes which projects are preparing for airdrops and what actions are required. The user receives a personalized checklist of registrations, interactions, and deadlines. Includes an anti-scam filter to protect users from fake projects. A “Pro Mode” allows wallet automation to perform farming actions based on predefined strategies.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **AI Analysis** of upcoming airdrop opportunities
+- ✅ **Personalized Checklists** with tasks, deadlines, and progress tracking
+- 🛡️ **Anti-Scam Filter** to detect and warn about suspicious or fake projects
+- 🤖 **Pro Mode**: Automated wallet farming based on user-defined strategies
+- 🔗 **Phantom Wallet Integration** for seamless blockchain interactions
+- ⚡ Built with **Vite**, **React**, **TypeScript**, and **Tailwind CSS**
+- 🧠 Powered by **Ollama** for local AI model inference
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Framework**: [React](https://reactjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Wallet**: [Phantom Wallet](https://phantom.app/)
+- **AI Runtime**: [Ollama](https://ollama.com/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Package Manager**: [npm](https://www.npmjs.com/)
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/airdrop-ai.git
+cd airdrop-ai
+
+# Install dependencies
+npm install
+````
+
+---
+
+## 🧪 Development
+
+```bash
+# Start the local development server
+npm run dev
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔐 Wallet Integration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This app integrates with the [Phantom Wallet](https://phantom.app/). Users must have Phantom installed in their browser and be connected to the Solana network to enable Pro Mode and farming actions.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🧠 AI Features with Ollama
+
+This app uses [Ollama](https://ollama.com/) to run local AI models. Make sure you have Ollama installed and running before launching the app if you want to use AI-powered features.
+
+
+
+## 🛠 Build for Production
+
+```bash
+npm run build
