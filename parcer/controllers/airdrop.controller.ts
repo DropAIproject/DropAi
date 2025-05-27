@@ -1,6 +1,7 @@
 import { CheckedAirdrop } from "../models/checked.airdrop.model";
 import { Airdrop } from "../models/airdrop.model";
 import { queryOllama } from "../cron/ollama-request";
+import { Request, Response } from "express";
 
 export async function processAirdrops() {
   const airdrops = await Airdrop.find();
@@ -30,6 +31,12 @@ export async function processAirdrops() {
   }
 }
 
-processAirdrops().catch((err) => {
-  console.error("⚠️ Error:", err);
-});
+export async function getAllAirdrops(req: Request, res: Response) {
+  try {
+    const airdrops = await CheckedAirdrop.find();
+    res.status(200).json(airdrops);
+  } catch (error) {
+    console.error("Error fetching airdrops:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+}
