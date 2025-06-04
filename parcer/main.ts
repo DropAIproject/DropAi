@@ -7,7 +7,7 @@ import { processAirdrops } from "./controllers/airdrop.controller";
 import airdropRoutes from "./routes/airdrop.routes";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
