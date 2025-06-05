@@ -4,7 +4,7 @@ import { Airdrop } from "../types";
 export const getProjects = async (): Promise<Airdrop[]> => {
   try {
     const response = await axios.get<Airdrop[]>(
-      "http://localhost:3000/api/airdrops"
+      "https://dropai-1.onrender.com//api/airdrops"
     );
     console.log("response", response);
 
