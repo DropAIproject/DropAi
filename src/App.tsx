@@ -6,7 +6,7 @@ import Header from './components/Header';
 import './App.css';
 
 // ==== Wallet imports ====
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+
 import {
   ConnectionProvider,
   WalletProvider
