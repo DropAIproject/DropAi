@@ -1,4 +1,4 @@
-
+import { Card } from "../ui/Card";
 
 import "./AirdropCard.css";
 
