@@ -23,7 +23,7 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 import { useMemo } from 'react';
 
 function App() {
-  const network = WalletAdapterNetwork.Devnet; // або 'mainnet-beta'
+
   const endpoint = useMemo(() => 'https://api.devnet.solana.com', []);
 
   const wallets = useMemo(
