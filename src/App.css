@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,4 +52,58 @@ body {
 
 .nav-link:hover {
   color: #d8b4fe;
+}
+
+.burger-menu {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-menu div {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #a855f7;
+}
+
+.burger-menu div:first-child {
+  top: 0px;
+}
+
+.burger-menu div:nth-child(2) {
+  top: 9px;
+}
+
+.burger-menu div:last-child {
+  bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav {
+    background-color: #000000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    top: 60px;
+    transition: 0.3s;
+    transform: translateX(100%);
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
 }
